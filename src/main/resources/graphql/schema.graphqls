@@ -1,0 +1,39 @@
+#a human being regarded as an individual
+type Person {
+    id: ID
+    #a personal name given to someone at birth or baptism and used before a family name
+    firstName: String!
+    #a surname
+    lastName: String!
+    #An email address identifies an email box to which messages are delivered. ... An email address, such as john.smith@example.com, is made up from a local-part, the symbol @, and a domain name.
+    emailAddress: String!
+    #a number assigned to a telephone line for a specific phone or set of phones (as for a residence) that is used to call that phone. — called also phone number.
+    officePhoneNumber: String
+    #a number assigned to a telephone line for a specific phone or set of phones (as for a residence) that is used to call that phone. — called also phone number.
+    mobilePhoneNumber: String
+}
+
+#A meeting is when two or more people come together to discuss one or more topics, often in a formal or business setting, but meetings also occur in a variety of other environments.
+type Meeting {
+    id: ID
+    #The title should describe the purpose of the meeting
+    title: String!
+    #The description should cover the details of the meeting's purpose.
+    description: String
+    #The person who setup the meeting
+    organizer: Person!
+    #The people who will attend the meeting
+    attendees: [Person]
+}
+
+#Meeting API
+type Query {
+    #Fetch a meeting by id
+    meeting(id: ID): Meeting
+    #Fetch all meetings
+    meetings: [Meeting]
+    #Fetch a person by id
+    person(id: ID): Person
+    #Fetch all people
+    people: [Person]
+}

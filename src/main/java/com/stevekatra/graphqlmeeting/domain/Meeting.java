@@ -23,6 +23,6 @@ public class Meeting {
     @ManyToOne
     private Person organizer;
 
-    @OneToMany
+    @ManyToMany
     private List<Person> attendees;
 }

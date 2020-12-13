@@ -32,12 +32,6 @@ public class GraphqlMeetingApplication {
 		SpringApplication.run(GraphqlMeetingApplication.class, args);
 	}
 
-	/**
-	 * Register the {@link OpenEntityManagerInViewFilter} so that the
-	 * GraphQL-Servlet can handle lazy loads during execution.
-	 *
-	 * @return
-	 */
 	@Bean
 	public Filter OpenFilter() {
 		return new OpenEntityManagerInViewFilter();

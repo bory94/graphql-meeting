@@ -37,3 +37,34 @@ type Query {
     #Fetch all people
     people: [Person]
 }
+
+input PersonInput {
+    id: ID
+    #a personal name given to someone at birth or baptism and used before a family name
+    firstName: String!
+    #a surname
+    lastName: String!
+    #An email address identifies an email box to which messages are delivered. ... An email address, such as john.smith@example.com, is made up from a local-part, the symbol @, and a domain name.
+    emailAddress: String!
+    #a number assigned to a telephone line for a specific phone or set of phones (as for a residence) that is used to call that phone. — called also phone number.
+    officePhoneNumber: String
+    #a number assigned to a telephone line for a specific phone or set of phones (as for a residence) that is used to call that phone. — called also phone number.
+    mobilePhoneNumber: String
+}
+
+input MeetingInput {
+    id: ID
+    #The title s  hould describe the purpose of the meeting
+    title: String!
+    #The description should cover the details of the meeting's purpose.
+    description: String
+    #The person who setup the meeting
+    organizer: PersonInput!
+    #The people who will attend the meeting
+    attendees: [PersonInput]
+}
+
+type Mutation {
+    createMeeting(meeting: MeetingInput): Meeting
+    updateMeeting(meeting: MeetingInput): Meeting
+}

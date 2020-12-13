@@ -38,6 +38,7 @@ type Query {
     people: [Person]
 }
 
+#Person Input object is used to create or update a Person
 input PersonInput {
     id: ID
     #a personal name given to someone at birth or baptism and used before a family name
@@ -52,6 +53,7 @@ input PersonInput {
     mobilePhoneNumber: String
 }
 
+#Meeting Input object is used to create or update a Meeting
 input MeetingInput {
     id: ID
     #The title s  hould describe the purpose of the meeting
@@ -64,7 +66,10 @@ input MeetingInput {
     attendees: [PersonInput]
 }
 
+#Meeting API Mutations
 type Mutation {
+    #Creates a meeting
     createMeeting(meeting: MeetingInput): Meeting
+    #Updates a meeting
     updateMeeting(meeting: MeetingInput): Meeting
 }

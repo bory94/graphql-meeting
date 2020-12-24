@@ -14,7 +14,6 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import javax.annotation.PostConstruct;
 import javax.servlet.Filter;
-import javax.transaction.Transactional;
 import java.util.ArrayList;
 import java.util.List;
 

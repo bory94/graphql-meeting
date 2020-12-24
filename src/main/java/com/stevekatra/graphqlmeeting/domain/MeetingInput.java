@@ -1,9 +1,14 @@
 package com.stevekatra.graphqlmeeting.domain;
 
 import lombok.Data;
-import lombok.EqualsAndHashCode;
+
+import java.util.List;
 
 @Data
-@EqualsAndHashCode(callSuper = false)
-public class MeetingInput extends Meeting {
+public class MeetingInput {
+    private Long id;
+    private String title;
+    private String description;
+    private PersonInput organizer;
+    private List<PersonInput> attendees;
 }

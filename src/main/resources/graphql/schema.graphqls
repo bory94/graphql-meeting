@@ -69,7 +69,17 @@ input MeetingInput {
 #Meeting API Mutations
 type Mutation {
     #Creates a meeting
-    createMeeting(meeting: MeetingInput): Meeting
+    createMeeting(meeting: MeetingInput!): Meeting
     #Updates a meeting
-    updateMeeting(meeting: MeetingInput): Meeting
+    updateMeeting(meeting: MeetingInput!): Meeting
+    #Creates a person
+    createPerson(person: PersonInput!): Person
+    #Updates a person
+    updatePerson(person: PersonInput!): Person
+}
+
+#Meeting API Subscription
+type Subscription {
+    #Fetch all people
+    people: [Person]
 }

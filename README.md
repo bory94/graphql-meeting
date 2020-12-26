@@ -10,9 +10,9 @@ GraphQL Endpoint for Meetings
 ## Demo
 1. Go to http://localhost:8080/graphiql
 2. Explore Schema
-3. Try example queries
+3. Try example queries, mutations, and subscriptions
 
-## Youtube Tutorials
+## YouTube Tutorials
 
 * [![GraphQL Queries](http://img.youtube.com/vi/6ylG8IKgEUA/0.jpg)](http://www.youtube.com/watch?v=6ylG8IKgEUA "GraphQL Queries")
 * [![GraphQL Mutations](http://img.youtube.com/vi/rkmw8LRPTd8/0.jpg)](http://www.youtube.com/watch?v=rkmw8LRPTd8 "GraphQL Mutations")
